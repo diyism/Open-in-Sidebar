@@ -1,4 +1,8 @@
-﻿# Open in Sidebar
+# Add default two sidebar web pages(), you can modify it to add multiple sidebar web pages:
+![screenshot](screenshot.png)
+
+ 
+# Open in Sidebar
 [日本語のREADME.mdを読みたい場合はここをクリックしてください](README_ja.md)
 
 Very simple and useful extension. You can open a link in the sidebar.
