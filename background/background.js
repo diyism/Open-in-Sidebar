@@ -58,6 +58,36 @@ main();
 
 async function main() {
 	await readValues();
+
+function removeXFrameOptionsHeader(e) {
+  let headers = e.responseHeaders.filter(header => {
+    return header.name.toLowerCase() !== "x-frame-options";
+  });
+  return {responseHeaders: headers};
+}
+
+browser.webRequest.onHeadersReceived.addListener(
+  removeXFrameOptionsHeader,
+  {urls: ["*://*/*"]},
+  ["blocking", "responseHeaders"]
+);
+
+function modifySecFetchDestHeader(e) {
+  let headers = e.requestHeaders.map(header => {
+    if (header.name.toLowerCase() === "sec-fetch-dest") {
+      header.value = "document";
+    }
+    return header;
+  });
+  return {requestHeaders: headers};
+}
+
+browser.webRequest.onBeforeSendHeaders.addListener(
+  modifySecFetchDestHeader,
+  {urls: ["*://*/*"]},
+  ["blocking", "requestHeaders"]
+);
+
 	browser.browserAction.onClicked.addListener(() => {
 		switch (currentSettings[storageKeys.toolbarIconAction]) {
 			case toolbarIconActions.toggle:
