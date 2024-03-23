@@ -2,7 +2,8 @@
 
     You can modify sidebar/sidebar.html to support multiple sidebar web pages,
     download the source code zip file and unzip it or run "git clone https://github.com/diyism/Open-in-Sidebar/",
-    open "about:debugging" in firefox, click the blue "This Firefox", click "Load Temporary Add-on", open the "Open-in-Sidebar" directory
+    open "about:debugging" in firefox, click the blue "This Firefox",
+    click "Load Temporary Add-on", open the "Open-in-Sidebar" directory
 
 ![screenshot](screenshot.png)
 
