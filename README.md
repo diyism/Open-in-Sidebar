@@ -1,4 +1,6 @@
-# Add default two sidebar web pages(https://keep.google.com, https://www.tradingview.com/chart), you can modify it to add multiple sidebar web pages:
+# Add default two sidebar web pages(https://keep.google.com, https://www.tradingview.com/chart)
+
+You can modify sidebar/sidebar.html to support multiple sidebar web pages:
 ![screenshot](screenshot.png)
 
  
