@@ -75,7 +75,7 @@ browser.webRequest.onHeadersReceived.addListener(
 function modifySecFetchDestHeader(e) {
   let headers = e.requestHeaders.map(header => {
     if (header.name.toLowerCase() === "sec-fetch-dest") {
-      header.value = "document";
+      //header.value = "document";
     }
     return header;
   });
